@@ -2,12 +2,54 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
-#define V2Base      0
-#define V2NumNav    1
-#define V2Sym       2
-#define V2Game      3
-#define V2Func      4
+#define Base      0
+#define NumNav    1
+#define Sym       2
+#define Game      3
+#define Func      4
+
+
+// This lets you define how fast the maximum speed is reached. So after 500ms the speed will 
+// be the full speed defined. In other words, it is the amount of time you need to hold a key
+// to move the mouse before reaching the full speed.
+#define MOUSE_TIME_TO_MAX_SPEED 500 
+
+// This is what you need to set the mouse speed
+#define U_MOUSE_MOVE_MAX 3000
+
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+
+&mmv {
+    time-to-max-speed-ms = <MOUSE_TIME_TO_MAX_SPEED>;
+};
+
+
+// This is was you need for setting the scroll speed
+#define U_MOUSE_SCROLL_MAX 20 
+
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+
+&mwh {
+    time-to-max-speed-ms = <MOUSE_TIME_TO_MAX_SPEED>;
+};
+
+
 
 &mt {
     quick-tap-ms = <100>;
@@ -34,7 +76,25 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        comma_morph: comma_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_morph: dot_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
+};
+
 
     combos {
         compatible = "zmk,combos";
@@ -68,16 +128,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        V2Base {
+        Base {
             bindings = <
          &kp Q       &kp W       &kp F               &kp P            &kp B         &kp J    &kp L        &kp U      &kp Y    &kp SEMI
          &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &kp T            &kp G         &kp M    &kp N        &kp E      &kp I    &kp O
-&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V         &kp K    &kp H        &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
+&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V         &kp K    &kp H        &comma_morph  &dot_morph  &kp FSLH  &kp SQT
                                  &lt 3 DEL           &lt 2 BACKSPACE  &kp LSHIFT    &kp RET  &lt 1 SPACE  &kp TAB
             >;
         };
 
-        V2NumNav {
+        NumNav {
             bindings = <
         &kp PLUS   &kp N7  &kp N8  &kp N9  &kp STAR     &trans  &trans    &kp UP    &trans  &trans
         &kp N0     &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &kp LEFT  &kp DOWN  &kp UP  &trans
@@ -86,7 +146,7 @@
             >;
         };
 
-        V2Sym {
+        Sym {
             bindings = <
         &kp EXCL  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp MINUS  &kp EQUAL
         &trans    &trans  &kp LPAR   &kp RPAR  &trans       &trans     &kp LBRC  &kp RBRC  &trans     &trans
@@ -95,7 +155,7 @@
             >;
         };
 
-        V2Func {
+        Func {
             bindings = <
             &trans  &trans  &kp C_BRI_DN  &kp C_BRI_UP  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &bt BT_SEL 1    &trans  &trans  &trans  &trans  &trans
@@ -104,7 +164,7 @@
             >;
         };
 
-        V2Game {
+        Game {
             bindings = <
         &trans  &trans  &kp W   &trans  &trans    &trans  &trans    &kp UP    &trans     &trans
         &trans  &kp A   &kp S   &kp D   &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
