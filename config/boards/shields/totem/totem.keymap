@@ -1,3 +1,7 @@
+/// ################################################################################################ ///
+/// IT SEEMS LIKE THIS FILE IS NOT THE ONE THAT IS INTERPRITED, LOOK FOR THE OTHER totem.keymap FILE ///
+/// ################################################################################################ ///
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
