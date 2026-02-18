@@ -42,6 +42,7 @@
         label = "COMMA_MORPH";
         #binding-cells = <0>;
         bindings = <&kp COMMA>, <&kp SCLN>;
+
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -50,6 +51,7 @@
         label = "DOT_MORPH";
         #binding-cells = <0>;
         bindings = <&kp DOT>, <&kp LS(SCLN)>;
+
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -58,15 +60,16 @@
         label = "EXCL_MORPH";
         #binding-cells = <0>;
         bindings = <&kp EXCL>, <&kp QMARK>;
+
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-
 
     slash_shift: slash_shift {
         compatible = "zmk,behavior-mod-morph";
         label = "SLASH_SHIFT";
         #binding-cells = <0>;
         bindings = <&kp FSLH>, <&kp BSLH>;
+
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -75,6 +78,7 @@
         label = "SLASH_MORPH";
         #binding-cells = <0>;
         bindings = <&slash_shift>, <&kp LS(BSLH)>;
+
         mods = <(MOD_LALT|MOD_RALT)>;
     };
 
@@ -112,10 +116,10 @@
 
         Base {
             bindings = <
-         &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L        &kp U         &kp Y      &excl_morph
-         &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &kp T            &kp G      &kp M    &kp N        &kp E         &kp I      &kp O
-&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H        &comma_morph  &dot_morph &slash_morph  &kp SQT
-                                 &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE  &lt 2 MINUS
+         &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L         &kp U         &kp Y            &excl_morph
+         &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &hm T LSHIFT     &kp G      &kp M    &hm N RSHIFT  &hm E RCTRL   &hm I RIGHT_ALT  &hm O RIGHT_GUI
+&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H         &comma_morph  &dot_morph       &slash_morph     &kp SQT
+                                 &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE   &lt 2 MINUS
             >;
         };
 
