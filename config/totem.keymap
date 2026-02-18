@@ -116,9 +116,9 @@
 
         Base {
             bindings = <
-         &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L         &kp U         &kp Y            &excl_morph
-         &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &hm T LSHIFT     &kp G      &kp M    &hm N RSHIFT  &hm E RCTRL   &hm I RIGHT_ALT  &hm O RIGHT_GUI
-&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H         &comma_morph  &dot_morph       &slash_morph     &kp SQT
+         &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L         &kp U         &kp Y       &excl_morph
+         &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &hm LSHFT T      &kp G      &kp M    &hm RSHIFT N  &hm RCTRL E   &hm RALT I  &hm RGUI O
+&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H         &comma_morph  &dot_morph  &slash_morph  &kp SQT
                                  &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE   &lt 2 MINUS
             >;
         };
