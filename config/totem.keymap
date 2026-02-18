@@ -5,9 +5,10 @@
 
 #define Base      0
 #define NumNav    1
-#define Sym       2
-#define Game      3
-#define Func      4
+#define Mouse     2
+#define Sym       3
+#define Game      4
+#define Func      5
 
 &mt {
     quick-tap-ms = <100>;
@@ -34,6 +35,47 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+    };
+
+    comma_morph: comma_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "COMMA_MORPH";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp SCLN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    dot_morph: dot_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOT_MORPH";
+        #binding-cells = <0>;
+        bindings = <&kp DOT>, <&kp LS(SCLN)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    excl_morph: excl_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXCL_MORPH";
+        #binding-cells = <0>;
+        bindings = <&kp EXCL>, <&kp QMARK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+
+    slash_shift: slash_shift {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SLASH_SHIFT";
+        #binding-cells = <0>;
+        bindings = <&kp FSLH>, <&kp BSLH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    slash_morph: slash_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SLASH_MORPH";
+        #binding-cells = <0>;
+        bindings = <&slash_shift>, <&kp LS(BSLH)>;
+        mods = <(MOD_LALT|MOD_RALT)>;
     };
 
     combos {
@@ -70,9 +112,9 @@
 
         Base {
             bindings = <
-         &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L        &kp U        &kp Y    &kp SEMI
-         &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &kp T            &kp G      &kp M    &kp N        &kp E        &kp I    &kp O
-&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H        &kp COMMA    &kp DOT  &kp FSLH  &kp SQT
+         &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L        &kp U         &kp Y      &excl_morph
+         &hm LGUI A  &hm LALT R  &hm LEFT_CONTROL S  &kp T            &kp G      &kp M    &kp N        &kp E         &kp I      &kp O
+&kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H        &comma_morph  &dot_morph &slash_morph  &kp SQT
                                  &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE  &lt 2 MINUS
             >;
         };
@@ -97,7 +139,7 @@
 
         Sym {
             bindings = <
-        &kp EXCL   &kp AT  &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS       &kp STAR          &trans  &trans
+        &trans     &kp AT  &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS       &kp STAR          &trans  &trans
         &kp GRAVE  &trans  &kp LPAR   &kp RPAR  &trans       &trans     &kp LBKT       &kp RBKT          &trans  &kp BSLH
 &trans  &trans     &trans  &kp LBRC   &kp RBRC  &trans       &trans     &kp LESS_THAN  &kp GREATER_THAN  &trans  &trans    &trans
                            &trans     &trans    &trans       &trans     &trans         &trans
