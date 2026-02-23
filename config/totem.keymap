@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// Urob's helper macros
+#include "zmk-helpers/helper.h"
+
 #define Base      0
 #define NumNav    1
 #define Mouse     2
