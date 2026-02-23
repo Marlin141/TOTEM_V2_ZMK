@@ -42,20 +42,20 @@
 
 
 / {
-    /* Urobs timeless home row mods */
-    hml: homerow_mod_left { 
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;
-        require-prior-idle-ms = <150>;
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <KEYS_R THUMBS>;
-        hold-trigger-on-release;
-    };
-
-
     // behaviors {
+        /* Urobs timeless home row mods */
+        hml: homerow_mods_left { 
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODs_LEFT";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
