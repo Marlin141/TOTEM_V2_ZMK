@@ -10,9 +10,8 @@
 #define DEF       0
 #define NUM       1
 #define NAV       2
-#define Sym       3
-#define Game      4
-#define Func      5
+#define Game      3
+#define Func      4
 
 /*                KEY POSITIONS
       ╭────────────────────╮ ╭────────────────────╮
@@ -67,14 +66,13 @@ ZMK_HOLD_TAP(hmr,
 
 
 // Tap: comma | Shift + tap: semicolon.
-SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &kp LESS_THAN)
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &kp SEMI)
 
 // Tap: dot | Shift + tap: colon.
-SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &kp GREATER_THAN)
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &kp COLON)
 
 // Tap: qmark | Shift + tap: excl.
 SIMPLE_MORPH(excl_morph, SFT, &kp EXCL, &kp QMARK)
-
 
 
 // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
@@ -97,10 +95,10 @@ SIMPLE_MORPH(rbrc_rbkt, SFT, &kp RBRC, &kp RBKT)
 
 
 /* Horizontal combos - left hand */
-//ZMK_COMBO(cut,   &kp LC(X),    LB3 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-//ZMK_COMBO(copy,  &kp LC(INS),  LB3 LB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-//ZMK_COMBO(pasteNF, &kp LS(INS), LB3 LB2 LB1,  DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-//ZMK_COMBO(paste, &kp LC(V),  LB2 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cut,   &kp LC(X),    LB3 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(copy,  &kp LC(INS),  LB3 LB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(pasteNF, &kp LS(INS), LB3 LB2 LB1,  DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(paste, &kp LC(V),  LB2 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 
@@ -192,15 +190,6 @@ ZMK_COMBO(pipe,  &kp PIPE,     RM3 RB3,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_
         &trans  &mkp MCLK  &mkp RCLK       &mkp LCLK       &trans             &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT
 &trans  &trans  &trans     &trans          &msc SCRL_DOWN  &trans             &msc SCRL_DOWN  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
                            &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT    &trans          &trans          &trans
-            >;
-        };
-
-        Sym {
-            bindings = <
-        &kp GRAVE  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS       &kp STAR          &trans  &trans
-        &trans     &trans  &kp LPAR   &kp RPAR  &trans       &trans     &kp LBKT       &kp RBKT          &trans  &trans
-&trans  &trans     &trans  &kp LBRC   &kp RBRC  &trans       &trans     &kp LESS_THAN  &kp GREATER_THAN  &trans  &trans  &trans
-                           &trans     &trans    &trans       &trans     &trans         &trans
             >;
         };
 
