@@ -10,8 +10,9 @@
 #define DEF       0
 #define NUM       1
 #define NAV       2
-#define Game      3
-#define Func      4
+#define Func      3
+#define Game      4
+
 
 /*                KEY POSITIONS
       ╭────────────────────╮ ╭────────────────────╮
@@ -171,7 +172,7 @@ ZMK_COMBO(pipe,  &kp PIPE,     RM3 RB3,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_
          &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L         &kp U         &kp Y       &excl_morph
          &hml LGUI A &hml LALT R &hml LEFT_CONTROL S &hml LSHFT T     &kp G      &kp M    &hmr RSHFT N &hmr RCTRL E  &hmr RALT I &hmr RGUI O
 &kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H         &comma_morph  &dot_morph  &slash_morph  &kp SQT
-                                 &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE   &lt 2 MINUS
+                                 &lt 3 DEL           &kp BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE   &lt 2 MINUS
             >;
         };
 
