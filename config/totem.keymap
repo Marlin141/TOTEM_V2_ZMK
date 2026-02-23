@@ -37,13 +37,10 @@
 };
 
 
-
-
 / {
     /* Urobs timeless home row mods */
     hml: homerow_mods_left { 
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS_LEFT";
         #binding-cells = <2>;
         flavor = "balanced";
         tapping-term-ms = <280>;
@@ -54,16 +51,18 @@
         hold-trigger-on-release;
     };
 
-    hm: homerow_mods {
+    hmr: homerow_mods_right { 
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
+        flavor = "balanced";
+        tapping-term-ms = <280>;
+        quick-tap-ms = <175>;
+        require-prior-idle-ms = <150>;
         bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <KEYS_L THUMBS>;
+        hold-trigger-on-release;
     };
+
 
     comma_morph: comma_morph {
         compatible = "zmk,behavior-mod-morph";
@@ -145,7 +144,7 @@
         Base {
             bindings = <
          &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L         &kp U         &kp Y       &excl_morph
-         &hml LGUI A &hml LALT R &hml LEFT_CONTROL S &hml LSHFT T     &kp G      &kp M    &hm RSHIFT N  &hm RCTRL E   &hm RALT I  &hm RGUI O
+         &hml LGUI A &hml LALT R &hml LEFT_CONTROL S &hml LSHFT T     &kp G      &kp M    &hmr RSHIFT N &hmr RCTRL E  &hmr RALT I &hmr RGUI O
 &kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H         &comma_morph  &dot_morph  &slash_morph  &kp SQT
                                  &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE   &lt 2 MINUS
             >;
