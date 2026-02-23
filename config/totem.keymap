@@ -5,6 +5,7 @@
 
 // Urob's helper macros
 #include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/totem.h"   
 
 #define Base      0
 #define NumNav    1
@@ -24,6 +25,16 @@
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31
 #define THUMBS 32 33 34 35 36 37
+
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
+
+ZMK_COMBO(cut,   &kp LC(X),    LB3 LB1, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 
 
 &mt {
