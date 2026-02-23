@@ -104,9 +104,10 @@ SIMPLE_MORPH(rbrc_rbkt, SFT, &kp RBRC, &kp RBKT)
 
 
 
-/* Horizontal combos - right hand */
-ZMK_COMBO(lpar,  &lpar_lt,     RM1 RM2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LCTRL),    KEYS_L)
-ZMK_COMBO(rpar,  &rpar_gt,     RM2 RM3,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LALT),     KEYS_L)
+/* Horizontal combos - right hand (note that I have deleted some things off the end of these as they wernt working) */
+
+ZMK_COMBO(lpar,  &lpar_lt,     RM1 RM2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(rpar,  &rpar_gt,     RM2 RM3,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(lbrc,  &lbrc_lbkt,   RB1 RB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbrc,  &rbrc_rbkt,   RB2 RB3,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -170,7 +171,7 @@ ZMK_COMBO(pipe,  &kp PIPE,     RM3 RB3,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_
         DEF {
             bindings = <
          &kp Q       &kp W       &kp F               &kp P            &kp B      &kp J    &kp L         &kp U         &kp Y       &excl_morph
-         &hml LGUI A &hml LALT R &hml LEFT_CONTROL S &hml LSHFT T     &kp G      &kp M    &hmr RSHIFT N &hmr RCTRL E  &hmr RALT I &hmr RGUI O
+         &hml LGUI A &hml LALT R &hml LEFT_CONTROL S &hml LSHFT T     &kp G      &kp M    &hmr RSHFT N &hmr RCTRL E  &hmr RALT I &hmr RGUI O
 &kp ESC  &kp Z       &kp X       &kp C               &kp D            &kp V      &kp K    &kp H         &comma_morph  &dot_morph  &slash_morph  &kp SQT
                                  &lt 4 DEL           &lt 3 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE   &lt 2 MINUS
             >;
@@ -178,10 +179,10 @@ ZMK_COMBO(pipe,  &kp PIPE,     RM3 RB3,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_
 
         NUM {
             bindings = <
-        &kp STAR  &kp N7  &kp N8  &kp N9  &kp PLUS     &trans  &kp PAGE_UP    &kp UP    &kp HOME   &trans
-        &kp N0    &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &trans
-&trans  &kp FSLH  &kp N1  &kp N2  &kp N3  &kp MINUS    &trans  &kp PAGE_DOWN  &trans    &kp END    &trans  &trans
-                          &trans  &trans  &kp DOT      &trans  &trans         &trans
+        &kp STAR      &kp N7  &kp N8        &kp N9         &kp PLUS     &trans  &kp PAGE_UP    &kp UP    &kp HOME   &trans
+        &hml LGUI N0  &kp N4  &hml LALT N5  &hml LSHFT N6  &kp EQUAL    &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &trans
+&trans  &kp FSLH      &kp N1  &kp N2        &kp N3         &kp MINUS    &trans  &kp PAGE_DOWN  &trans    &kp END    &trans  &trans
+                              &trans        &trans         &kp DOT      &trans  &trans         &trans
             >;
         };
 
