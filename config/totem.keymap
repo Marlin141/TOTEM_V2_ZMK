@@ -7,9 +7,6 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"   
 
-// Some things are moved into other files to reduce clutter
-#include "combos.dtsi"
-#include "leader.dtsi"
 
 
 
@@ -93,6 +90,9 @@ ZMK_HOLD_TAP(hm_shft_r,
 )
 
 
+
+
+
 /* Caps Word Settings */
 &caps_word {
     // Allow caps word to continue even when minus or underscore
@@ -128,6 +128,14 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 // Tap: left/right curly-bracket | Shft + tap: left/right square-bracket.
 SIMPLE_MORPH(lbrc_lbkt, SFT, &kp LBRC, &kp LBKT)
 SIMPLE_MORPH(rbrc_rbkt, SFT, &kp RBRC, &kp RBKT)
+
+
+
+
+
+// Some things are moved into other files to reduce clutter
+#include "combos.dtsi"
+#include "leader.dtsi"
 
 
 
