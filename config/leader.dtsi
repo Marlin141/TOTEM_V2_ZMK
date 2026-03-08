@@ -30,7 +30,7 @@ ZMK_LEADER_SEQUENCE(cedilla,    &cedilla,            S)
 
 
 
-/* Greek letters 
+/* Greek letters */
 ZMK_LEADER_SEQUENCE(el_alpha,   &uc UC_EL_ALPHA,      E A)  // α
 ZMK_LEADER_SEQUENCE(el_beta,    &uc UC_EL_BETA,       E B)  // β
 ZMK_LEADER_SEQUENCE(el_gamma,   &uc UC_EL_GAMMA,      E G)  // γ
@@ -55,4 +55,3 @@ ZMK_LEADER_SEQUENCE(el_phi,     &uc UC_EL_PHI,        E F)  // ϕ
 ZMK_LEADER_SEQUENCE(el_chi,     &uc UC_EL_CHI,        E C)  // χ
 ZMK_LEADER_SEQUENCE(el_psi,     &uc UC_EL_PSI,        E Y)  // ψ
 ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      E W)  // ω
-*/
