@@ -93,7 +93,6 @@ ZMK_HOLD_TAP(hm_shft_r,
 
 
 
-
 /* Caps Word Settings */
 &caps_word {
     // Allow caps word to continue even when minus or underscore
