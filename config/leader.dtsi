@@ -1,4 +1,5 @@
 #undef ZMK_LEADER_SEQUENCE
+
 #define ZMK_LEADER_SEQUENCE(name, leader_bindings, leader_sequence) \
     / { \
         behaviors { \
@@ -21,16 +22,16 @@ ZMK_LEADER_SEQUENCE(de_ue,      &uc UC_DE_UE,         U)  // ü
 ZMK_LEADER_SEQUENCE(de_eszett,  &uc UC_DE_SS,         S)  // ß
 */
 
-/* Acents (works with all letters) */
+/* Acents (works with all letters) 
 ZMK_LEADER_SEQUENCE(acute,      &acute,              A) 
 ZMK_LEADER_SEQUENCE(grave,      &grave,              G)
 ZMK_LEADER_SEQUENCE(circumflex, &circumflex,         C)
 ZMK_LEADER_SEQUENCE(diaeresis,  &diaeresis,          D)
 ZMK_LEADER_SEQUENCE(cedilla,    &cedilla,            S)
+*/
 
 
-
-/* Greek letters */
+/* Greek letters 
 ZMK_LEADER_SEQUENCE(el_alpha,   &uc UC_EL_ALPHA,      E A)  // α
 ZMK_LEADER_SEQUENCE(el_beta,    &uc UC_EL_BETA,       E B)  // β
 ZMK_LEADER_SEQUENCE(el_gamma,   &uc UC_EL_GAMMA,      E G)  // γ
@@ -55,3 +56,4 @@ ZMK_LEADER_SEQUENCE(el_phi,     &uc UC_EL_PHI,        E F)  // ϕ
 ZMK_LEADER_SEQUENCE(el_chi,     &uc UC_EL_CHI,        E C)  // χ
 ZMK_LEADER_SEQUENCE(el_psi,     &uc UC_EL_PSI,        E Y)  // ψ
 ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      E W)  // ω
+*/
