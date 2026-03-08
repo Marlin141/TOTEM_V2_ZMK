@@ -21,13 +21,13 @@ ZMK_LEADER_SEQUENCE(de_ue,      &uc UC_DE_UE,         U)  // ü
 ZMK_LEADER_SEQUENCE(de_eszett,  &uc UC_DE_SS,         S)  // ß
 */
 
-/* Acents (works with all letters) 
+/* Acents (works with all letters) */
 ZMK_LEADER_SEQUENCE(acute,      &acute,              A) 
 ZMK_LEADER_SEQUENCE(grave,      &grave,              G)
 ZMK_LEADER_SEQUENCE(circumflex, &circumflex,         C)
 ZMK_LEADER_SEQUENCE(diaeresis,  &diaeresis,          D)
 ZMK_LEADER_SEQUENCE(cedilla,    &cedilla,            S)
-*/
+
 
 
 /* Greek letters 
