@@ -93,7 +93,6 @@ ZMK_HOLD_TAP(hm_shft_r,
 
 
 
-
 /* Caps Word Settings */
 &caps_word {
     // Allow caps word to continue even when minus or underscore
@@ -136,7 +135,7 @@ SIMPLE_MORPH(rbrc_rbkt, SFT, &kp RBRC, &kp RBKT)
 
 // Some things are moved into other files to reduce clutter
 #include "combos.dtsi"
-// #include "leader.dtsi"
+#include "leader.dtsi"
 
 
 
