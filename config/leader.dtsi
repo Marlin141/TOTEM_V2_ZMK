@@ -22,14 +22,23 @@ ZMK_LEADER_SEQUENCE(de_ue,      &uc UC_DE_UE,         U)  // ü
 ZMK_LEADER_SEQUENCE(de_eszett,  &uc UC_DE_SS,         S)  // ß
 */
 
-/* Acents (works with all letters) */
-ZMK_LEADER_SEQUENCE(acute,      &acute,              A) 
-ZMK_LEADER_SEQUENCE(grave,      &grave,              G)
-ZMK_LEADER_SEQUENCE(circumflex, &circumflex,         C)
-ZMK_LEADER_SEQUENCE(diaeresis,  &diaeresis,          D)
-ZMK_LEADER_SEQUENCE(cedilla,    &cedilla,            S)
-
-
+/* French letters */
+ZMK_LEADER_SEQUENCE(fr_ae,           &uc UC_FR_AE,           A E)  // æ/Æ
+ZMK_LEADER_SEQUENCE(fr_oe,           &uc UC_FR_OE,           O E)  // œ/Œ
+ZMK_LEADER_SEQUENCE(fr_a_grave,      &uc UC_FR_A_GRAVE,      A G)  // à/À
+ZMK_LEADER_SEQUENCE(fr_a_circumflex, &uc UC_FR_A_CIRCUMFLEX, A C)  // â/Â
+ZMK_LEADER_SEQUENCE(fr_c_cedilla,    &uc UC_FR_C_CEDILLA,    C S)  // ç/Ç
+ZMK_LEADER_SEQUENCE(fr_e_grave,      &uc UC_FR_E_GRAVE,      E G)  // è/È
+ZMK_LEADER_SEQUENCE(fr_e_acute,      &uc UC_FR_E_ACUTE,      E A)  // é/É
+ZMK_LEADER_SEQUENCE(fr_e_circumflex, &uc UC_FR_E_CIRCUMFLEX, E C)  // ê/Ê
+ZMK_LEADER_SEQUENCE(fr_e_diaeresis,  &uc UC_FR_E_DIAERESIS,  E D)  // ë/Ë
+ZMK_LEADER_SEQUENCE(fr_i_circumflex, &uc UC_FR_I_CIRCUMFLEX, I C)  // î/Î
+ZMK_LEADER_SEQUENCE(fr_i_diaeresis,  &uc UC_FR_I_DIAERESIS,  I D)  // ï/Ï
+ZMK_LEADER_SEQUENCE(fr_o_circumflex, &uc UC_FR_O_CIRCUMFLEX, O C)  // ô/Ô
+ZMK_LEADER_SEQUENCE(fr_u_grave,      &uc UC_FR_U_GRAVE,      U G)  // ù/Ù
+ZMK_LEADER_SEQUENCE(fr_u_circumflex, &uc UC_FR_U_CIRCUMFLEX, U C)  // û/Û
+ZMK_LEADER_SEQUENCE(fr_u_diaeresis,  &uc UC_FR_U_DIAERESIS,  U D)  // ü/Ü
+ZMK_LEADER_SEQUENCE(fr_y_diaeresis,  &uc UC_FR_Y_DIAERESIS,  Y D)  // ÿ/Ÿ
 
 /* Greek letters */
 ZMK_LEADER_SEQUENCE(el_alpha,   &uc UC_EL_ALPHA,      E A)  // α

@@ -131,53 +131,10 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 SIMPLE_MORPH(lbrc_lbkt, SFT, &kp LBRC, &kp LBKT)
 SIMPLE_MORPH(rbrc_rbkt, SFT, &kp RBRC, &kp RBKT)
 
-// Sticky shift + leader. (I dont really understand what this is for)
+// Sticky shift + leader. (I dont really understand what this is for) prob to type characters in upper case
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;) 
 
 
-
-
-
-
-/ {
-    macros {
-        acute: acute {
-            compatible = "zmk,behavior-macro";
-            label = "ACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>;
-        };
-
-        grave: grave {
-            compatible = "zmk,behavior-macro";
-            label = "GRAVE";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>;
-        };
-
-        circumflex: circumflex {
-            compatible = "zmk,behavior-macro";
-            label = "CIRCUMFLEX";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N6)>; // ^
-        };
-
-        diaeresis: diaeresis {
-            compatible = "zmk,behavior-macro";
-            label = "DIAERESIS";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>; // "
-        };
-
-        cedilla: cedilla {
-            compatible = "zmk,behavior-macro";
-            label = "CEDILLA";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>;
-        };
-
-    };
-};
 
 
 // Some things are moved into other files to reduce clutter
