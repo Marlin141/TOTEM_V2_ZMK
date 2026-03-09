@@ -22,16 +22,16 @@ ZMK_LEADER_SEQUENCE(de_ue,      &uc UC_DE_UE,         U)  // ü
 ZMK_LEADER_SEQUENCE(de_eszett,  &uc UC_DE_SS,         S)  // ß
 */
 
-/* Acents (works with all letters) 
+/* Acents (works with all letters) */
 ZMK_LEADER_SEQUENCE(acute,      &acute,              A) 
 ZMK_LEADER_SEQUENCE(grave,      &grave,              G)
 ZMK_LEADER_SEQUENCE(circumflex, &circumflex,         C)
 ZMK_LEADER_SEQUENCE(diaeresis,  &diaeresis,          D)
 ZMK_LEADER_SEQUENCE(cedilla,    &cedilla,            S)
-*/
 
 
-/* Greek letters */
+
+/* Greek letters 
 ZMK_LEADER_SEQUENCE(el_alpha,   &uc UC_EL_ALPHA,      E A)  // α
 ZMK_LEADER_SEQUENCE(el_beta,    &uc UC_EL_BETA,       E B)  // β
 ZMK_LEADER_SEQUENCE(el_gamma,   &uc UC_EL_GAMMA,      E G)  // γ
@@ -56,18 +56,18 @@ ZMK_LEADER_SEQUENCE(el_phi,     &uc UC_EL_PHI,        E F)  // ϕ
 ZMK_LEADER_SEQUENCE(el_chi,     &uc UC_EL_CHI,        E C)  // χ
 ZMK_LEADER_SEQUENCE(el_psi,     &uc UC_EL_PSI,        E Y)  // ψ
 ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      E W)  // ω
+*/
 
-
-/* Fn keys */
-ZMK_LEADER_SEQUENCE(fn_f1,  &kp F1,  F N1)
-ZMK_LEADER_SEQUENCE(fn_f2,  &kp F2,  F N2)
-ZMK_LEADER_SEQUENCE(fn_f3,  &kp F3,  F N3)
-ZMK_LEADER_SEQUENCE(fn_f4,  &kp F4,  F N4)
-ZMK_LEADER_SEQUENCE(fn_f5,  &kp F5,  F N5)
-ZMK_LEADER_SEQUENCE(fn_f6,  &kp F6,  F N6)
-ZMK_LEADER_SEQUENCE(fn_f7,  &kp F7,  F N7)
-ZMK_LEADER_SEQUENCE(fn_f8,  &kp F8,  F N8)
-ZMK_LEADER_SEQUENCE(fn_f9,  &kp F9,  F N9)
-ZMK_LEADER_SEQUENCE(fn_f10, &kp F10, F N1 N0)
-ZMK_LEADER_SEQUENCE(fn_f11, &kp F11, F N1 N1)
-ZMK_LEADER_SEQUENCE(fn_f12, &kp F12, F N1 N2)
+/* Fn keys (these follow the num pad interms of layout) */
+ZMK_LEADER_SEQUENCE(fn_f1,  &kp F1,  F X)
+ZMK_LEADER_SEQUENCE(fn_f2,  &kp F2,  F C)
+ZMK_LEADER_SEQUENCE(fn_f3,  &kp F3,  F D)
+ZMK_LEADER_SEQUENCE(fn_f4,  &kp F4,  F R)
+ZMK_LEADER_SEQUENCE(fn_f5,  &kp F5,  F S)
+ZMK_LEADER_SEQUENCE(fn_f6,  &kp F6,  F T)
+ZMK_LEADER_SEQUENCE(fn_f7,  &kp F7,  F W)
+ZMK_LEADER_SEQUENCE(fn_f8,  &kp F8,  F F)
+ZMK_LEADER_SEQUENCE(fn_f9,  &kp F9,  F P)
+ZMK_LEADER_SEQUENCE(fn_f10, &kp F10, F V)
+ZMK_LEADER_SEQUENCE(fn_f11, &kp F11, F G)
+ZMK_LEADER_SEQUENCE(fn_f12, &kp F12, F B)
