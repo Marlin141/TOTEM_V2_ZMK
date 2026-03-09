@@ -176,7 +176,7 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
         };
 
     };
-}
+};
 
 // Some things are moved into other files to reduce clutter
 #include "combos.dtsi"
