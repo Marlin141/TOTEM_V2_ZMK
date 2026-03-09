@@ -57,3 +57,17 @@ ZMK_LEADER_SEQUENCE(el_chi,     &uc UC_EL_CHI,        E C)  // χ
 ZMK_LEADER_SEQUENCE(el_psi,     &uc UC_EL_PSI,        E Y)  // ψ
 ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      E W)  // ω
 */
+
+/* Fn keys */
+ZMK_LEADER_SEQUENCE(fn_f1,  &kp F1,  F N1)
+ZMK_LEADER_SEQUENCE(fn_f2,  &kp F2,  F N2)
+ZMK_LEADER_SEQUENCE(fn_f3,  &kp F3,  F N3)
+ZMK_LEADER_SEQUENCE(fn_f4,  &kp F4,  F N4)
+ZMK_LEADER_SEQUENCE(fn_f5,  &kp F5,  F N5)
+ZMK_LEADER_SEQUENCE(fn_f6,  &kp F6,  F N6)
+ZMK_LEADER_SEQUENCE(fn_f7,  &kp F7,  F N7)
+ZMK_LEADER_SEQUENCE(fn_f8,  &kp F8,  F N8)
+ZMK_LEADER_SEQUENCE(fn_f9,  &kp F9,  F N9)
+ZMK_LEADER_SEQUENCE(fn_f10, &kp F10, F N1 N0)
+ZMK_LEADER_SEQUENCE(fn_f11, &kp F11, F N1 N1)
+ZMK_LEADER_SEQUENCE(fn_f12, &kp F12, F N1 N2)
