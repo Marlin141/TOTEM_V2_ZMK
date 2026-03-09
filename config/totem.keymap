@@ -140,35 +140,35 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 / {
     macros {
-        acute {
+        acute: acute {
             compatible = "zmk,behavior-macro";
             label = "ACUTE";
             #binding-cells = <0>;
             bindings = <&kp SQT>;
         };
 
-        grave {
+        grave: grave {
             compatible = "zmk,behavior-macro";
             label = "GRAVE";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>;
         };
 
-        circumflex {
+        circumflex: circumflex {
             compatible = "zmk,behavior-macro";
             label = "CIRCUMFLEX";
             #binding-cells = <0>;
             bindings = <&kp LS(N6)>; // ^
         };
 
-        diaeresis {
+        diaeresis: diaeresis {
             compatible = "zmk,behavior-macro";
             label = "DIAERESIS";
             #binding-cells = <0>;
             bindings = <&kp DQT>; // "
         };
 
-        cedilla {
+        cedilla: cedilla {
             compatible = "zmk,behavior-macro";
             label = "CEDILLA";
             #binding-cells = <0>;
@@ -178,9 +178,11 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
     };
 };
 
+
 // Some things are moved into other files to reduce clutter
 #include "combos.dtsi"
 #include "leader.dtsi"
+#include "mouse.dtsi"
 
 
 
