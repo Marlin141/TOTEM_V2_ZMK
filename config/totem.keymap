@@ -129,7 +129,8 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 SIMPLE_MORPH(lbrc_lbkt, SFT, &kp LBRC, &kp LBKT)
 SIMPLE_MORPH(rbrc_rbkt, SFT, &kp RBRC, &kp RBKT)
 
-
+// Sticky shift + leader. (I dont really understand what this is for)
+ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;) 
 
 
 
