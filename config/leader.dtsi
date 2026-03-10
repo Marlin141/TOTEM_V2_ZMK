@@ -13,7 +13,9 @@
             ignore-keys = <LSHFT RSHFT>;
             
             /* Greek letters */
-            ZMK_LEADER_SEQ(el_alpha,   &uc UC_EL_ALPHA,      G A)  // α
+            ZMK_LEADER_SEQ(el_alpha,   &el_alpha,      G A)  // α
+
+            /*
             ZMK_LEADER_SEQ(el_beta,    &uc UC_EL_BETA,       G B)  // β
             ZMK_LEADER_SEQ(el_gamma,   &uc UC_EL_GAMMA,      G G)  // γ
             ZMK_LEADER_SEQ(el_delta,   &uc UC_EL_DELTA,      G D)  // δ
@@ -37,6 +39,8 @@
             ZMK_LEADER_SEQ(el_chi,     &uc UC_EL_CHI,        G C)  // χ
             ZMK_LEADER_SEQ(el_psi,     &uc UC_EL_PSI,        G Y)  // ψ
             ZMK_LEADER_SEQ(el_omega,   &uc UC_EL_OMEGA,      G W)  // ω
+
+            */
         };
     };
 };
