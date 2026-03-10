@@ -37,10 +37,6 @@
             ZMK_LEADER_SEQ(el_chi,     &uc UC_EL_CHI,        G C)  // χ
             ZMK_LEADER_SEQ(el_psi,     &uc UC_EL_PSI,        G Y)  // ψ
             ZMK_LEADER_SEQ(el_omega,   &uc UC_EL_OMEGA,      G W)  // ω
-
-
-
-
         };
     };
 };

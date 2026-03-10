@@ -1,3 +1,52 @@
+
+// Mouse Movement
+#define U_MS_U &mmv_behavior MOVE_UP
+#define U_MS_D &mmv_behavior MOVE_DOWN
+#define U_MS_L &mmv_behavior MOVE_LEFT
+#define U_MS_R &mmv_behavior MOVE_RIGHT
+
+// Mouse Scroll
+#define U_WH_U &msc_behavior SCRL_UP
+#define U_WH_D &msc_behavior SCRL_DOWN
+#define U_WH_L &msc_behavior SCRL_LEFT
+#define U_WH_R &msc_behavior SCRL_RIGHT
+
+// Mouse Buttons
+#define U_BTN1 &mkp LCLK
+#define U_BTN2 &mkp RCLK
+#define U_BTN3 &mkp MCLK
+
+
+/ {
+    behaviors {
+        /* Mouse movement acceleration settings */
+        mmv_behavior: mmv_behavior {
+            compatible = "zmk,behavior-mouse-move";
+            #binding-cells = <1>;
+            acceleration-exponent = <1>;      // urob's default: 1
+            time-to-max-speed-ms = <500>;    // urob's default: 500
+            delay-ms = <0>;                   // urob's default: 0
+        };
+
+        /* Mouse scroll acceleration settings */
+        msc_behavior: msc_behavior {
+            compatible = "zmk,behavior-mouse-scroll";
+            #binding-cells = <1>;
+            acceleration-exponent = <0>;      // urob's default: 0
+            time-to-max-speed-ms = <300>;    // urob's default: 300
+            delay-ms = <0>;                   // urob's default: 0
+        };
+    };
+};
+
+
+
+
+
+
+
+
+
 // Settings tuned for 3840 x 2160 display resolution
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600 // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20  // 10
