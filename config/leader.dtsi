@@ -1,24 +1,53 @@
 #undef ZMK_LEADER_SEQUENCE
-
-#define ZMK_LEADER_SEQUENCE(name, leader_bindings, leader_sequence) \
-    / { \
-        behaviors { \
-            leader: leader { \
-                compatible = "zmk,behavior-leader-key"; \
-                #binding-cells = <0>; \
-                ignore-keys = <LSHFT RSHFT>; \
-                leader_sequence_ ## name { \
-                    bindings = <leader_bindings>; \
-                    sequence = <leader_sequence>; \
-                }; \
-            }; \
-        }; \
+#define ZMK_LEADER_SEQ(name, bindings, sequence) \
+    leader_sequence_ ## name { \
+        bindings = <bindings>; \
+        sequence = <sequence>; \
     };
 
-/* German umlauts 
-ZMK_LEADER_SEQUENCE(de_ae,      &uc UC_DE_AE,         A)  // ä
-ZMK_LEADER_SEQUENCE(de_oe,      &uc UC_DE_OE,         O)  // ö
-*/
+/ {
+    behaviors {
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            ignore-keys = <LSHFT RSHFT>;
+            
+            /* Greek letters */
+            ZMK_LEADER_SEQ(el_alpha,   &uc UC_EL_ALPHA,      G A)  // α
+            ZMK_LEADER_SEQ(el_beta,    &uc UC_EL_BETA,       G B)  // β
+            ZMK_LEADER_SEQ(el_gamma,   &uc UC_EL_GAMMA,      G G)  // γ
+            ZMK_LEADER_SEQ(el_delta,   &uc UC_EL_DELTA,      G D)  // δ
+            ZMK_LEADER_SEQ(el_epsilon, &uc UC_EL_EPSILON,    G E)  // ε
+            ZMK_LEADER_SEQ(el_zeta,    &uc UC_EL_ZETA,       G Z)  // ζ
+            ZMK_LEADER_SEQ(el_eta,     &uc UC_EL_ETA,        G H)  // η
+            ZMK_LEADER_SEQ(el_theta,   &uc UC_EL_THETA,      G V)  // θ
+            ZMK_LEADER_SEQ(el_iota,    &uc UC_EL_IOTA,       G I)  // ι
+            ZMK_LEADER_SEQ(el_kappa,   &uc UC_EL_KAPPA,      G K)  // κ
+            ZMK_LEADER_SEQ(el_lambda,  &uc UC_EL_LAMBDA,     G L)  // λ
+            ZMK_LEADER_SEQ(el_mu,      &uc UC_EL_MU,         G M)  // μ
+            ZMK_LEADER_SEQ(el_nu,      &uc UC_EL_NU,         G N)  // ν
+            ZMK_LEADER_SEQ(el_xi,      &uc UC_EL_XI,         G X)  // ξ
+            ZMK_LEADER_SEQ(el_omikron, &uc UC_EL_OMIKRON,    G O)  // ο
+            ZMK_LEADER_SEQ(el_pi,      &uc UC_EL_PI,         G P)  // π
+            ZMK_LEADER_SEQ(el_rho,     &uc UC_EL_RHO,        G R)  // ρ
+            ZMK_LEADER_SEQ(el_sigma,   &uc UC_EL_SIGMA,      G S)  // σ
+            ZMK_LEADER_SEQ(el_tau,     &uc UC_EL_TAU,        G T)  // τ
+            ZMK_LEADER_SEQ(el_upsilon, &uc UC_EL_UPSILON,    G U)  // υ
+            ZMK_LEADER_SEQ(el_phi,     &uc UC_EL_PHI,        G F)  // ϕ
+            ZMK_LEADER_SEQ(el_chi,     &uc UC_EL_CHI,        G C)  // χ
+            ZMK_LEADER_SEQ(el_psi,     &uc UC_EL_PSI,        G Y)  // ψ
+            ZMK_LEADER_SEQ(el_omega,   &uc UC_EL_OMEGA,      G W)  // ω
+
+
+
+
+        };
+    };
+};
+
+
+/*
+
 
 /* French letters 
 ZMK_LEADER_SEQUENCE(fr_ae,           &uc UC_FR_AE,           A E)  // æ/Æ
@@ -39,7 +68,7 @@ ZMK_LEADER_SEQUENCE(fr_u_diaeresis,  &uc UC_FR_U_DIAERESIS,  U D)  // ü/Ü
 ZMK_LEADER_SEQUENCE(fr_y_diaeresis,  &uc UC_FR_Y_DIAERESIS,  Y D)  // ÿ/Ÿ
 */
 
-/* Greek letters */
+/* Greek letters 
 ZMK_LEADER_SEQUENCE(el_alpha,   &uc UC_EL_ALPHA,      G A)  // α
 ZMK_LEADER_SEQUENCE(el_beta,    &uc UC_EL_BETA,       G B)  // β
 ZMK_LEADER_SEQUENCE(el_gamma,   &uc UC_EL_GAMMA,      G G)  // γ
@@ -64,9 +93,9 @@ ZMK_LEADER_SEQUENCE(el_phi,     &uc UC_EL_PHI,        G F)  // ϕ
 ZMK_LEADER_SEQUENCE(el_chi,     &uc UC_EL_CHI,        G C)  // χ
 ZMK_LEADER_SEQUENCE(el_psi,     &uc UC_EL_PSI,        G Y)  // ψ
 ZMK_LEADER_SEQUENCE(el_omega,   &uc UC_EL_OMEGA,      G W)  // ω
+*/
 
-
-/* Fn keys (these follow the num pad interms of layout) */
+/* Fn keys (these follow the num pad interms of layout) 
 ZMK_LEADER_SEQUENCE(fn_f1,  &kp F1,  F X)
 ZMK_LEADER_SEQUENCE(fn_f2,  &kp F2,  F C)
 ZMK_LEADER_SEQUENCE(fn_f3,  &kp F3,  F D)
@@ -79,3 +108,7 @@ ZMK_LEADER_SEQUENCE(fn_f9,  &kp F9,  F P)
 ZMK_LEADER_SEQUENCE(fn_f10, &kp F10, F V)
 ZMK_LEADER_SEQUENCE(fn_f11, &kp F11, F G)
 ZMK_LEADER_SEQUENCE(fn_f12, &kp F12, F B)
+*/
+
+
+*/
