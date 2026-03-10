@@ -175,10 +175,10 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
         DEF {
             bindings = <
-         &kp Q       &kp W       &kp F             &kp P               &kp B      &kp J    &kp L               &kp U         &kp Y       &kp SQT
-         &hml LGUI A &hml LALT R &hml LEFT_CTRL S  &hm_shft_l LSHFT T  &kp G      &kp M    &hm_shft_r RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&kp ESC  &kp Z       &kp X       &kp C             &kp D               &kp V      &kp K    &kp H               &comma_morph  &dot_morph  &excl_morph   &caps_word
-                                 &lt 3 DEL         &kp BACKSPACE       &kp TAB    &kp RET  &lt 1 SPACE         &lt 2 MINUS
+         &kp Q       &kp W       &kp F         &kp P               &kp B      &kp J    &kp L               &kp U         &kp Y       &kp SQT
+         &hml LGUI A &hml LALT R &hml LCTRL S  &hm_shft_l LSHFT T  &kp G      &kp M    &hm_shft_r RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
+&kp ESC  &kp Z       &kp X       &kp C         &kp D               &kp V      &kp K    &kp H               &comma_morph  &dot_morph  &excl_morph   &caps_word
+                                 &lt 3 DEL     &kp BACKSPACE       &kp TAB    &kp RET  &lt 1 SPACE         &lt 2 MINUS
             >;
         };
 
