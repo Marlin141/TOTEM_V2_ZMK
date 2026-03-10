@@ -184,10 +184,10 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
         NUM {
             bindings = <
-        &kp STAR      &kp N7  &kp N8        &kp N9         &kp PLUS     &kp PG_UP &NAV_BSPC   &NAV_UP   &NAV_DEL   &trans
-        &hml LGUI N0  &kp N4  &hml LALT N5  &hml LSHFT N6  &kp EQUAL    &kp PG_DN &NAV_LEFT   &NAV_DOWN &NAV_RIGHT &trans
-&trans  &kp FSLH      &kp N1  &kp N2        &kp N3         &kp MINUS    &kp INS   &kp TAB     &trans    &trans     &trans  &trans
-                              &trans        &trans         &trans       &trans    &trans      &trans
+        &kp STAR      &kp N7  &kp N8        &kp N9         &kp PLUS     &kp PG_UP  NAV_BSPC    NAV_UP    NAV_DEL    &trans
+        &hml LGUI N0  &kp N4  &hml LALT N5  &hml LSHFT N6  &kp EQUAL    &kp PG_DN  NAV_LEFT    NAV_DOWN  NAV_RIGHT  &trans
+&trans  &kp FSLH      &kp N1  &kp N2        &kp N3         &kp MINUS    &kp INS    &kp TAB     &trans    &trans     &trans  &trans
+                              &trans        &trans         &trans       &trans     &trans      &trans
             >;
         };
 
