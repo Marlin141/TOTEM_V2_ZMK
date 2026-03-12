@@ -1,7 +1,0 @@
-include:
-  - board: seeed_xiao_ble
-    shield: totem_left
-  - board: seeed_xiao_ble
-    shield: totem_right
-  - board: seeed_xiao_ble
-    shield: settings_reset
