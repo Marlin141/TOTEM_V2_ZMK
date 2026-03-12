@@ -5,4 +5,4 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
     with:
       build_matrix_path: "build.yml"
-      config_path: "."
+      config_path: "config"
