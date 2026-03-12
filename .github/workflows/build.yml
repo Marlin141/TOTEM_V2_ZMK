@@ -2,7 +2,7 @@ name: Build
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
       build_matrix_path: "build.yml"
-      config_path: "config"
+      config_path: "."  # This is the "Modern" flag
